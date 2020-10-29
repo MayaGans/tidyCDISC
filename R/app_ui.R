@@ -15,22 +15,8 @@ app_ui <- function(request) {
                id = "navbarID",
                windowTitle = "tidyCDISC",
                tabPanel(
-                 title = "Data",
-                 mod_dataUpload_ui("dataUpload_ui_1")
-               ),
-               tabPanel(
                  title = "Table Generator",
                  div(mod_tableGen_ui("tableGen_ui_1"), id = "tableGen")
-               ),
-               tabPanel(
-                 title = "Population Explorer",
-                 # mod_selectData_ui("selectData_ui_1"),
-                 # mod_selectData_ui("popExp_ui_1"),
-                 mod_popExp_ui("popExp_ui_1")
-               ),
-               tabPanel(
-                 title = "Individual Explorer",
-                 mod_indvExp_ui("indvExp_ui_1")
                )
       )
     )
