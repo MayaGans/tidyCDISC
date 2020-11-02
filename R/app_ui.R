@@ -11,9 +11,13 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     
     # List the first level UI elements here 
-    navbarPage(title = div(id="logo-id","tidyCDISC", img(src="www/tidyCDISC_ICON.png", style="float:left; padding-right:3px; height:25px; width:30px")), 
+    navbarPage(title = div(id="logo-id","tidyCDISC: RStudio Table Contest Submission", img(src="www/tidyCDISC_ICON.png", style="float:left; padding-right:3px; height:25px; width:30px")), 
                id = "navbarID",
                windowTitle = "tidyCDISC",
+               tabPanel(
+                 title = "About",
+                 mod_tableGen_about_ui("tableGen_about_ui_1")
+               ),
                tabPanel(
                  title = "Table Generator",
                  div(mod_tableGen_ui("tableGen_ui_1"), id = "tableGen")
