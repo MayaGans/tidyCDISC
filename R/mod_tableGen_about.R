@@ -17,8 +17,10 @@ mod_tableGen_about_ui <- function(id) {
       fluidRow(
         column(4,
                 br(), br(),
-         h4("
-         Clinical trial data that follows the", a("CDISC", href="test"), "standard
+         p(
+         style="font-size:15px;",
+         "
+         Clinical trial data that follows the", a("CDISC", href="https://www.cdisc.org/"), "standard
          share common column names that are used as keys to merge the data collected
          over the course of a study.
          ",
@@ -39,7 +41,7 @@ mod_tableGen_about_ui <- function(id) {
         )
         ),
       column(8,
-             img(src="www/tablecomp.gif", style="margin:auto;padding:50px;filter:drop-shadow(0 0 0.75rem gray);")
+             img(src="www/tablecomp.gif", style="width:90%;margin:auto;padding:50px;filter:drop-shadow(0 0 0.75rem gray);")
              )
       ))
     )

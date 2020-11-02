@@ -1,0 +1,13 @@
+name: tablecontest-biogen
+title: tablecontest-biogen
+username:
+account: maya-gans
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3144931
+bundleId: 3811051
+url: https://maya-gans.shinyapps.io/tablecontest-biogen/
+when: 1604328779.76107
+lastSyncTime: 1604328779.76108
+asMultiple: FALSE
+asStatic: FALSE

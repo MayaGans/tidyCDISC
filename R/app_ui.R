@@ -11,7 +11,7 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     
     # List the first level UI elements here 
-    navbarPage(title = div(id="logo-id","tidyCDISC: RStudio Table Contest Submission", img(src="www/tidyCDISC_ICON.png", style="float:left; padding-right:3px; height:25px; width:30px")), 
+    navbarPage(title = div(id="logo-id","RStudio Table Contest Submission"), 
                id = "navbarID",
                windowTitle = "tidyCDISC",
                tabPanel(
@@ -21,8 +21,15 @@ app_ui <- function(request) {
                tabPanel(
                  title = "Table Generator",
                  div(mod_tableGen_ui("tableGen_ui_1"), id = "tableGen")
-               )
-      )
+               ),
+               tags$script(
+                 HTML("var header = $('.navbar > .container-fluid');
+                              header.append('<img src=\"www/biogen-logo.png\" style=\"width:5%;height:5%;float:right;padding-top:7px;\">')")
+               ),
+               tags$script(
+                 HTML("var header = $('.navbar > .container-fluid');
+                              header.append('<a href=\"https://github.com/biogen-inc\" target=\"_blank\"><img id=\"github\" src=\"www/github.png\" style=\"float:right;padding-top:5px;padding-right:15px;\"></a>')")
+               ))
     )
   }
 
