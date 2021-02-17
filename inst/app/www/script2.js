@@ -121,8 +121,37 @@ selectChange("droppable_blocks", 'droppable_blocks label', 'tableGen_ui_1-block_
     return `<option value="${opt}">${opt}</option>`
   }
 
+// create a variable at the global scope
+//let weeks = [];
+/*
+Shiny.addCustomMessageHandler('my_data', function(df) {
+  console.log("inside f1()- df:", df);
+  // now we can change that global variable
+  // by setting weeks to whatever we want
+  // rather than writing
+  // let weeks = blah
+  // which would be at the function scope
+  weeks = Object.values(df);
+});
+*/
+
+// JavaScript is really fast! 
+// I think some of the issue here is the order of operations:
+// When I try to log what weeks is immediately I get an empty array
+//console.log("what is weeks when we load the app:", weeks);
+
+// but if I wrap the function in a set timeout of 3 seconds then I do have the array so I'm able to do week stuff in here!! 
+//setTimeout(function(){ 
+//  console.log("what about after 3 seconds?:", weeks);
+//}, 3000);
+
+
 Shiny.addCustomMessageHandler('my_data', function(df) {
   // the dataframe column is imported as an array
+  //console.log("inside f2()- df:", df)
+  //weeks = Object.values(df)
+  //console.log("now whats weeks", weeks)
+  
   my_array = Object.values(df)
   select = `${my_array.map(createOption).join("")}`
   
